@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+        <variable
+            name="myName"
+            type="com.example.aboutme.MyName" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@={myName.name}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/nickName_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:hint="Enter your mame"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/doneBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@color/teal_200"
+                    android:gravity="center"
+                    android:shadowRadius="@integer/material_motion_duration_long_2"
+                    android:text="Done" />
+
+                <TextView
+                    android:id="@+id/showNickName_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@={myName.nickname}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/starImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/bio_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Now it’s your turn to complete this exercise.\n
+
+        1. Add a ScrollView with a TextView showing information about yourself to the layout.\n
+        2. Style the TextView with NameStyle, and add additional styling to separate the scrollable text from the edges of the screen. \n
+        3. Add some spacing between the lines using the lineSpacingMultiplier property to the TextView.
+        The are various definitions for “essay.” But here, we will focus on the meaning of this word that’s become a significant element of education in such countries as the United States, Canada, the United Kingdom, and Australia.
+
+        If summarized within the academic context, the essay’s definition would be the following:
+
+        An essay is a short nonfictional piece of formal writing assigned to students to improve their writing skills or assess their knowledge of a given subject.
+
+        Alternative essay definitions:
+
+        According to Frederick Crews, professor of English at the University of California at Berkeley, an essay is “a fairly brief piece of nonfiction that tries to make a point in an interesting way.”
+        Aldous Huxley, a famous essayist, notes that “the essay is a literary device for saying almost everything about almost anything” and divides essays into personal-biographical, objectively-factual, and abstract-universal.
+        The Oxford Dictionary defines it as “a short piece of writing on a particular subject.”
+        Note: Apart from the educational purpose, essays (also called papers or reports) are often required when applying to colleges and universities to help them select the best applicants during the admissions.
+
+        If you study the origin of the word and its history, you might understand its purpose better. The word “essay” comes from the Middle French word essayer, which in its turn comes from Latin exigere meaning “to test,” “examine,” and “drive out.”"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
